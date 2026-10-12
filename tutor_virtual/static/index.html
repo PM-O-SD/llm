@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Aula IA · Tu tutor virtual</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="Aula IA, inicio"><span class="brand-icon">a</span>Aula IA<span class="brand-dot"></span></a>
+  <p class="eyebrow">TU ESPACIO DE APRENDIZAJE</p>
+  <h1>Entiende.<br>Practica.<br><span>Avanza.</span></h1>
+  <p class="intro">Un tutor para aprender inteligencia artificial, a tu ritmo.</p>
+  <label for="level">Tu nivel</label>
+  <select id="level"><option>Principiante</option><option>Intermedio</option><option>Avanzado</option></select>
+  <p class="small-note">Elige un modo y cuéntame qué quieres aprender.</p>
+  <button id="reset" class="secondary" type="button">Nueva conversación ↗</button>
+  <div class="sidebar-bottom"><span class="status-dot"></span> Aprende con curiosidad<p>Las respuestas pueden contener errores. Comprueba los conceptos importantes.</p></div>
+</aside>
+<main>
+  <header class="topbar"><span>TUTOR VIRTUAL</span><span class="pill">Inteligencia artificial</span></header>
+  <section class="workspace">
+    <div class="heading"><p class="eyebrow">UN PASO MÁS CERCA DE ENTENDER</p><h2>¿Qué aprendemos hoy?</h2><p>De una duda a una idea clara. Empecemos por lo que necesitas.</p></div>
+    <div class="modes" role="group" aria-label="Modo de aprendizaje">
+      <button data-mode="explicar" class="mode active" aria-pressed="true"><span>01</span><strong>Explícame</strong><small>Conceptos con ejemplos</small></button>
+      <button data-mode="practicar" class="mode" aria-pressed="false"><span>02</span><strong>Quiero practicar</strong><small>Ejercicios a tu nivel</small></button>
+      <button data-mode="revisar" class="mode" aria-pressed="false"><span>03</span><strong>Revisa mi respuesta</strong><small>Aprende de tus intentos</small></button>
+      <button data-mode="plan" class="mode" aria-pressed="false"><span>04</span><strong>Organiza mi estudio</strong><small>Un camino para avanzar</small></button>
+    </div>
+    <section id="conversation" aria-label="Conversación" aria-live="polite">
+      <div id="welcome" class="welcome"><div class="spark">✦</div><h3>Las buenas preguntas abren caminos.</h3><p>No necesitas tenerlo todo claro para empezar.<br>Elige una idea o escribe tu propia pregunta.</p><div class="examples"><button type="button" data-example="Explícame la diferencia entre aprendizaje supervisado y no supervisado con un ejemplo sencillo.">Aprendizaje automático ↗</button><button type="button" data-example="¿Cómo funciona TF-IDF y para qué sirve en un recomendador de películas?">Sistemas recomendadores ↗</button><button type="button" data-example="¿Qué es un LLM y cómo se utiliza una API para interactuar con él?">Modelos de lenguaje ↗</button></div></div>
+    </section>
+    <p id="feedback" class="feedback" role="status"></p>
+    <form id="ask-form"><label class="sr-only" for="message">Tu pregunta</label><textarea id="message" rows="3" maxlength="4000" placeholder="Escribe tu pregunta. Si quieres revisar una respuesta, pégala aquí…" required></textarea><div class="composer-bottom"><span id="counter">0 / 4,000</span><button id="send" type="submit">Consultar al tutor <span>→</span></button></div></form>
+    <footer>Tu conversación permanece en esta pestaña. Las consultas se envían a OpenAI para generar las respuestas.</footer>
+  </section>
+</main>
+</div>
+</body></html>
